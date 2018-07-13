@@ -1,0 +1,31 @@
+<templateSet group="my-flutter-container">
+  <template name="fbgcolor" value="color:Colors$color$" description="背景颜色 Container" toReformat="false" toShortenFQNames="true">
+    <variable name="color" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="fcenterAlign" value="new Center(child: $child$)" description="垂直水平居中 child:" toReformat="false" toShortenFQNames="true">
+    <variable name="child" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="fbgcolorDecoration" value="decoration: new BoxDecoration(color: Colors$color$)" description="背景颜色 Container" toReformat="false" toShortenFQNames="true">
+    <variable name="color" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="fpadding" value="padding: new EdgeInsets.all($double$)," description="定位 Positioned" toReformat="false" toShortenFQNames="true">
+    <variable name="double" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="fpositionAbsolute" value="new Stack(&#10;    children: &lt;Widget&gt;[&#10;      new Positioned(&#10;        child: new Container(&#10;          child: new Text(&quot;Lorem ipsum&quot;),&#10;          decoration: new BoxDecoration(color: Colors.red[400]),&#10;          padding: new EdgeInsets.all(16.0),&#10;        ),&#10;        left: 24.0,&#10;        top: 24.0,&#10;      )&#10;    ],&#10;)" description="绝对定位 child:" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+</templateSet>

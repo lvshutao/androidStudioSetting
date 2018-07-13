@@ -1,0 +1,27 @@
+<templateSet group="my-flutter-textStyle">
+  <template name="ffontBold" value="fontWeight: FontWeight.bold" description="粗体 TextStyle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="ffontItalics" value="fontStyle: FontStyle.italic" description="斜体 TextStyle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="ffontOpacity" value="color: Colors.black.withOpacity(0.6)" description="透明度 TextStyle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="ffontSize" value="fontSize: 24.0" description="字体大小 TextStyle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="flineHeight" value="height: 10.0" description="行高 TextStyle" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+</templateSet>
