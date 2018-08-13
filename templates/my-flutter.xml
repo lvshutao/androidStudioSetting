@@ -11,4 +11,14 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="fsdrawer" value="Drawer(&#10;  child: Column(&#10;    children: &lt;Widget&gt;[&#10;      AppBar(&#10;        // 不需要保留左侧的菜单图标&#10;        automaticallyImplyLeading: false,&#10;        // 标题文字&#10;        title: Text('left'),&#10;      )&#10;    ],&#10;  ),&#10;)" description="抽屉页" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="demoDropDown" value="import 'package:flutter/material.dart';&#10;&#10;// drop_down.dart&#10;class DropDownWidget extends StatefulWidget {&#10;  @override&#10;  State&lt;StatefulWidget&gt; createState() {&#10;    return _DropDownState();&#10;  }&#10;}&#10;&#10;class _DropDownState extends State&lt;DropDownWidget&gt; {&#10;  var _selectItemValue;&#10;  List&lt;DropdownMenuItem&gt; itemList() {&#10;    List&lt;DropdownMenuItem&gt; items = new List();&#10;    items.add(new DropdownMenuItem(value: '赵一', child: new Text('赵一')));&#10;    items.add(new DropdownMenuItem(value: '钱二', child: new Text('钱二')));&#10;    items.add(new DropdownMenuItem(value: '孙三', child: new Text('孙三')));&#10;    return items;&#10;  }&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    // 下拉菜单展示的内容处没有下划线&#10;    return new DropdownButtonHideUnderline(&#10;      child: new DropdownButton(&#10;        hint: new Text('下拉菜单选择一个人名'),&#10;        value: _selectItemValue,&#10;        items: itemList(),&#10;        onChanged: (T) {&#10;          setState(() {&#10;            _selectItemValue = T;&#10;          });&#10;        },&#10;      ),&#10;    );&#10;  }&#10;}&#10;" description="a dropDown demo page" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
