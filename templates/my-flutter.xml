@@ -11,23 +11,8 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="fsdrawer" value="Drawer(&#10;  child: Column(&#10;    children: &lt;Widget&gt;[&#10;      AppBar(&#10;        // 不需要保留左侧的菜单图标&#10;        automaticallyImplyLeading: false,&#10;        // 标题文字&#10;        title: Text('left'),&#10;      )&#10;    ],&#10;  ),&#10;)" description="抽屉页" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="DART_TOPLEVEL" value="true" />
-    </context>
-  </template>
-  <template name="fstexttheme" value="Theme.of(context).textTheme.display1.$attr$" description="文字主题" toReformat="false" toShortenFQNames="true">
-    <variable name="attr" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="DART_TOPLEVEL" value="true" />
-    </context>
-  </template>
-  <template name="fscontainer" value="new Container(&#10;  // 设置外边距&#10;  margin: const EdgeInsets.all(4.0),&#10;  // 内边距&#10;  padding: const EdgeInsets.all(8.0),&#10;  // 添加到 child 上的额外约束&#10;  constraints: new BoxConstraints.expand(&#10;    height: Theme.of(context).textTheme.display1.fontSize * 1.1 + 200.0,&#10;  ),&#10;  // 背景色，只能与 decoration 二选一&#10;//          color: Colors.amber,&#10;  decoration: new BoxDecoration(&#10;    // 边框&#10;    border: new Border.all(width: 2.0, color: Colors.red),&#10;    // 背景颜色&#10;    color: Colors.grey,&#10;    // 圆角&#10;    borderRadius: new BorderRadius.all(new Radius.circular(5.0)),&#10;    // 背景颜色之上叠加图片&#10;    image: new DecorationImage(&#10;      image: new AssetImage('images/demo.jpg'),&#10;      // 截取此位置&#10;//      centerSlice: new Rect.fromLTRB(270.0, 180.0, 1360.0, 730.0),&#10;      fit: BoxFit.cover,&#10;    ),&#10;  ),&#10;  // child 的对齐方式&#10;  alignment: Alignment.center,&#10;  child: new Text(&#10;    'Hello World',&#10;    // 文字的样式&#10;    style: Theme&#10;        .of(context)&#10;        .textTheme&#10;        .display1&#10;        .copyWith(color: Colors.white),&#10;  ),&#10;  // 高度&#10;//          height: double.infinity,&#10;  // 宽度&#10;//          width: double.infinity,&#10;  // 旋转&#10;  transform: new Matrix4.rotationZ(0.3),&#10;)," description="带有文字说明的 Container" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="DART_TOPLEVEL" value="true" />
-    </context>
-  </template>
-  <template name="fsdecoration" value="new BoxDecoration(&#10;    // 边框&#10;    border: new Border.all(width: 2.0, color: Colors.red),&#10;    // 背景颜色&#10;    color: Colors.grey,&#10;    // 圆角&#10;    borderRadius: new BorderRadius.all(new Radius.circular(5.0)),&#10;    // 背景颜色之上叠加图片&#10;    image: new DecorationImage(&#10;      image: new AssetImage('images/demo.jpg'),&#10;      fit: BoxFit.cover,&#10;    ),&#10;)," description="带文字说明的 BoxDecoration" toReformat="false" toShortenFQNames="true">
+  <template name="mydemo" value="import 'package:flutter/material.dart';&#10;&#10;class $name$App extends StatelessWidget {&#10;  final String title = '$name$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return MaterialApp(&#10;      title: title,&#10;      home: new Scaffold(&#10;        appBar: new AppBar(&#10;          title: new Text(title),&#10;        ),&#10;        body: null,&#10;      ),&#10;    );&#10;  }&#10;}&#10;&#10;&#10;" description="Demo" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
