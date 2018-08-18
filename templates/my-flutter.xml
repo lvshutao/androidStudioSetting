@@ -11,7 +11,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="mydemo" value="import 'package:flutter/material.dart';&#10;&#10;class $name$App extends StatelessWidget {&#10;  final String title = '$name$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return MaterialApp(&#10;      title: title,&#10;      home: new Scaffold(&#10;        appBar: new AppBar(&#10;          title: new Text(title),&#10;        ),&#10;        body: null,&#10;      ),&#10;    );&#10;  }&#10;}&#10;&#10;class _$name extend StatelessWidget {&#10;    @override&#10;    Widget build(BuildContext context) {}&#10;}&#10;&#10;" description="Demo" toReformat="false" toShortenFQNames="true">
+  <template name="mydemo" value="import 'package:flutter/material.dart';&#10;&#10;class $name$App extends StatelessWidget {&#10;  final String title = '$name$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return MaterialApp(&#10;      title: title,&#10;      home: new Scaffold(&#10;        appBar: new AppBar(&#10;          title: new Text(title),&#10;        ),&#10;        body: _Main(),&#10;      ),&#10;    );&#10;  }&#10;}&#10;&#10;class _Main extend StatelessWidget {&#10;    @override&#10;    Widget build(BuildContext context) {}&#10;}&#10;&#10;" description="Demo" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
