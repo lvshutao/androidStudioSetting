@@ -17,4 +17,10 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
+  <template name="fshttpful" value="import 'package:flutter/material.dart';&#10;// iOS 风格&#10;import 'package:flutter/cupertino.dart';&#10;import 'dart:async';&#10;import 'dart:convert';&#10;import 'package:http/http.dart' as http;&#10;&#10;class $name$ extends StatefulWidget {&#10;&#10;  @override&#10;  _$name$State createState() =&gt; _$name$State();&#10;}&#10;&#10;class _$name$State extends State&lt;$name$&gt; {&#10;  Future getContent() async {&#10;    String url ='url address';&#10;&#10;    final response = await http.get(Uri.encodeFull(url));&#10;    if (response.statusCode == 200) {&#10;      return json.decode(response.body);&#10;      // return json.decode(response.body)['d']; // 如果想取某部门的内容&#10;    } else {&#10;      throw new Exception('Failed to load content');&#10;    }&#10;  }&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    &#10;    return new FutureBuilder(&#10;      future: getContent(),&#10;      builder: (context, snapshot) {&#10;        if (snapshot.hasData) {&#10;          var content = snapshot.data['content'];&#10;          // todo 这里填写返回的内容&#10;        } else if (snapshot.hasError) {&#10;          return new Container(&#10;            color: Colors.white,&#10;            child: new Text('error&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;:${snapshot.error}'),&#10;          );&#10;        }&#10;        return new Container(&#10;          color: new Color.fromRGBO(244, 245, 245, 1.0),&#10;          child: new CupertinoActivityIndicator(),&#10;        );&#10;      },&#10;    );&#10;  }&#10;}&#10;" description="New StatefulWidget With Http" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
 </templateSet>
