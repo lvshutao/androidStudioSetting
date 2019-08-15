@@ -60,10 +60,16 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="mybloclistener" value="BlocListener(&#10;    bloc:$1$,&#10;    listener:(context, state){&#10;        if (state is $2$Loading) {&#10;            WloadingToast.show(); // 加载框&#10;        } else if (state is $2$Failed) {&#10;            Wnav.snackBar(context, state.error); // 错误提示&#10;        }&#10;    },&#10;    child:$3$,&#10;)&#10;" description="BlocListener" toReformat="false" toShortenFQNames="true">
+  <template name="mybloclistener" value="BlocListener(&#10;    bloc:$1$,&#10;    listener:(context, state){&#10;        if (state is $2$Loading) {&#10;            WLoadingToast.show(); // 加载框&#10;        } else if (state is $2$Failed) {&#10;            WNav.snackBar(context, state.error); // 错误提示&#10;        }&#10;    },&#10;    child:$3$,&#10;)&#10;" description="BlocListener" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="mylistenerstate" value="if (state is $2$Loading) {&#10;    WLoadingToast.show(); // 加载框&#10;} else if (state is $2$Failed) {&#10;    WNav.snackBar(context, state.error); // 错误提示&#10;}" description="显示错误和提示" toReformat="false" toShortenFQNames="true">
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_STATEMENT" value="true" />
     </context>
