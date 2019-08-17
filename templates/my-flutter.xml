@@ -22,7 +22,7 @@
   <template name="myfontAwesomIcons" value="FontAwesomeIcons$1$" description="FontAwesomIcons" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="DART_STATEMENT" value="true" />
+      <option name="DART" value="true" />
     </context>
   </template>
   <template name="mynaviPush" value="Navigator.push(context,MaterialPageRoute(builder: (context) =&gt; $1$,),);" description="Navigator.push" toReformat="false" toShortenFQNames="true">
