@@ -79,4 +79,16 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="@required" value="@required" description="@required" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="dynamic" value="dynamic" description="dynamic" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
 </templateSet>
