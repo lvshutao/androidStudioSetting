@@ -91,4 +91,10 @@
       <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
+  <template name="initstate" value="@override&#10;void initState() {&#10;    super.initState();&#10;    $i$&#10;}" description="initState" toReformat="false" toShortenFQNames="true">
+    <variable name="i" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
