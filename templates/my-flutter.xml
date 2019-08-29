@@ -97,4 +97,11 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="mytestwidgets" value="testWidgets('$desc$', (WidgetTester tester) async {&#10;  await tester.pumpWidget(MaterialApp(home: $widget$,));&#10;});" description="testWidgets" toReformat="false" toShortenFQNames="true">
+    <variable name="desc" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="widget" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
