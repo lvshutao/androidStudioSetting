@@ -110,4 +110,9 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="mytestup" value="await tester.drag(find.byType(ListView), Offset(0, -300)); // 向上滚动&#10;await tester.pumpAndSettle();" description="屏幕向上" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
