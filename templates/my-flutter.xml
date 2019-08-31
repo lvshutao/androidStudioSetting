@@ -79,7 +79,7 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="@required" value="@required" description="@required" toReformat="false" toShortenFQNames="true">
+  <template name="required" value="@required" description="@required" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="true" />
       <option name="DART_TOPLEVEL" value="false" />
@@ -97,20 +97,20 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="mytestwidgets" value="testWidgets('$desc$', (WidgetTester tester) async {&#10;  await tester.pumpWidget(MaterialApp(home: Scaffold(body: $widget$,),),);&#10;  await tester.pumpAndSettle();&#10;  // await tester.pumpAndSettle(const Duration(seconds: 1));&#10;});" description="testWidgets" toReformat="false" toShortenFQNames="true">
+  <template name="mytewidgets" value="testWidgets('$desc$', (WidgetTester tester) async {&#10;  await tester.pumpWidget(MaterialApp(home: Scaffold(body: $widget$,),),);&#10;  await tester.pumpAndSettle();&#10;  // await tester.pumpAndSettle(const Duration(seconds: 1));&#10;});" description="testWidgets" toReformat="false" toShortenFQNames="true">
     <variable name="desc" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="widget" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="mytestresponse" value="dynamic $1$Response(String name, Map&lt;String, dynamic&gt; data) {&#10;    print('$1$:name:$name; data:$data');&#10;    return null;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+  <template name="myteresponse" value="dynamic $1$Response(String name, Map&lt;String, dynamic&gt; data) {&#10;    print('$1$:name:$name; data:$data');&#10;    return null;&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="mytestup" value="await tester.drag(find.byType(ListView), Offset(0, -300)); // 向上滚动&#10;await tester.pumpAndSettle();" description="屏幕向上" toReformat="false" toShortenFQNames="true">
+  <template name="myteup" value="await tester.drag(find.byType(ListView), Offset(0, -300)); // 向上滚动&#10;await tester.pumpAndSettle();" description="屏幕向上" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="true" />
     </context>
