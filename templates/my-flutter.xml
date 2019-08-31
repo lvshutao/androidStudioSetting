@@ -104,8 +104,7 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="myteresponse" value="dynamic $1$Response(String name, Map&lt;String, dynamic&gt; data) {&#10;    print('$1$:name:$name; data:$data');&#10;    return null;&#10;}" description="" toReformat="false" toShortenFQNames="true">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="myresponse" value="(String name, Map&lt;String, dynamic&gt; data){&#10;    print('name:$name; data:$data');&#10;}" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="true" />
     </context>
