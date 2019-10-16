@@ -114,4 +114,10 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="forin" value="for (final m in $list$){&#10;}" description="for in loop" toReformat="false" toShortenFQNames="true">
+    <variable name="list" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
