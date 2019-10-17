@@ -120,7 +120,7 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="fromJson" value="factory $name$.fromJson(Map&lt;String, dynamic&gt; json) {&#10;    return $name$();&#10;}" description="class from json" toReformat="false" toShortenFQNames="true">
+  <template name="myfromJson" value="factory $name$.fromJson(Map&lt;String, dynamic&gt; json) {&#10;    return $name$();&#10;}" description="class from json" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_STATEMENT" value="true" />
