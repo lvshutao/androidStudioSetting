@@ -126,4 +126,12 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="myrequest" value="return XDio.request('$name$', () async {&#10;  return await AppConfig.dio.post(&#10;      AppConfig.origin + '$api$',&#10;      data: FormData.fromMap($data$));&#10;}).then((response) {&#10;  return response.data;&#10;});" description="Dio 请求" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="api" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="data" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
