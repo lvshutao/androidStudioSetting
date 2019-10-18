@@ -116,13 +116,14 @@
   <template name="forin" value="for (final m in $list$){&#10;}" description="for in loop" toReformat="false" toShortenFQNames="true">
     <variable name="list" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="DART_STATEMENT" value="true" />
+      <option name="DART" value="true" />
     </context>
   </template>
   <template name="myfromjson" value="factory $name$.fromJson(Map&lt;String, dynamic&gt; json) {&#10;    return $name$();&#10;}" description="class factory" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="DART_STATEMENT" value="true" />
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
     </context>
   </template>
   <template name="myrequest" value="return XDio.request('$name$', () async {&#10;  return await AppConfig.dio.post(&#10;      AppConfig.origin + '$api$',&#10;      data: FormData.fromMap($data$));&#10;}).then((response) {&#10;  return response.data;&#10;});" description="Dio 请求" toReformat="false" toShortenFQNames="true">
