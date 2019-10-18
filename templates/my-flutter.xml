@@ -134,4 +134,10 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="myblocbuilder" value="BlocBuilder(bloc: bloc,builder: (BuildContext context, $state$ state){&#10;     &#10;},)," description="BlocBuilder" toReformat="false" toShortenFQNames="true">
+    <variable name="state" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
