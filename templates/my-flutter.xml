@@ -141,4 +141,10 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="myfromjsonrows" value="static List&lt;$class$&gt; rowsFromJson(List&lt;dynamic&gt; json) {&#10;  return json.map((d) =&gt; fromJson(d)).toList();&#10;}" description="Rows From Json" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
