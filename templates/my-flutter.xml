@@ -152,4 +152,9 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="bc" value="BuildContext context" description="BuildContext" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
