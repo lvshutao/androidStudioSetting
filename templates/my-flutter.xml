@@ -147,7 +147,7 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="i18s" value="S.of(context)" description="S.of(context)." toReformat="false" toShortenFQNames="true">
+  <template name="i8s" value="S.of(context)" description="S.of(context)." toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART_STATEMENT" value="true" />
     </context>
