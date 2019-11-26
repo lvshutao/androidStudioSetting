@@ -157,4 +157,12 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="mymultilistener" value="MultiBlocListener(&#10;  listeners: [&#10;    BlocListener(&#10;        bloc:$1$,&#10;        listener:(context, state){&#10;            if (state is $2$Loading) {&#10;                WLoadingToast.show(); // 加载框&#10;            } else if (state is $2$Failed) {&#10;                WNav.snackBar(context, state.error); // 错误提示&#10;            }&#10;        }&#10;    )&#10;  ],&#10;  child: $3$,&#10;)" description="MultiBlocListener" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
