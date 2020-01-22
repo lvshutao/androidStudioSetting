@@ -1,6 +1,6 @@
 <application>
   <component name="PathMacrosImpl">
-    <macro name="KOTLIN_BUNDLED" value="/private/var/folders/p6/r7nvhfsn6114xrm4n1kyvl0w0000gn/T/AppTranslocation/01189129-3665-4D34-84BB-0166390662FA/d/Android Studio.app/Contents/plugins/Kotlin/kotlinc" />
+    <macro name="KOTLIN_BUNDLED" value="/private/var/folders/p6/r7nvhfsn6114xrm4n1kyvl0w0000gn/T/AppTranslocation/B3240D27-4211-4F33-83A2-F2105A301258/d/Android Studio.app/Contents/plugins/Kotlin/kotlinc" />
     <ignoredMacro name="MESSAGE" />
     <ignoredMacro name="FILE_PATH" />
     <ignoredMacro name="LINE" />
