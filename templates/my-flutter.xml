@@ -1,5 +1,5 @@
 <templateSet group="my-flutter">
-  <template name="blocstate" value="import 'package:equatable/equatable.dart';&#10;import 'package:meta/meta.dart';&#10;&#10;@immutable&#10;abstract class $1$State extends Equatable {&#10;  $1$State([List props = const &lt;dynamic&gt;[]]) : super(props);&#10;}" description="Bloc State" toReformat="false" toShortenFQNames="true">
+  <template name="blocstate" value="import 'package:equatable/equatable.dart';&#10;&#10;@immutable&#10;abstract class $1$State extends Equatable {&#10;  @override&#10;  List&lt;Object&gt; get props =&gt; [];&#10;}" description="Bloc State" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
@@ -13,7 +13,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="blocevent" value="import 'package:equatable/equatable.dart';&#10;import 'package:meta/meta.dart';&#10;&#10;@immutable&#10;abstract class $1$Event extends Equatable {&#10;  $1$Event([List props = const &lt;dynamic&gt;[]]) : super(props);&#10;}" description="Bloc Event" toReformat="false" toShortenFQNames="true">
+  <template name="blocevent" value="import 'package:equatable/equatable.dart';&#10;import 'package:meta/meta.dart';&#10;&#10;@immutable&#10;abstract class $1$Event extends Equatable {&#10;  const $1$Event();&#10;  @override&#10;  List&lt;Object&gt; get props =&gt; [];&#10;}" description="Bloc Event" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
@@ -31,7 +31,7 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="myblocchild" value="class $name$ extends $bloc$  {&#10;@override&#10;String toString() =&gt; '$name$';&#10;}" description="Bloc Child" toReformat="false" toShortenFQNames="true">
+  <template name="myblocchild" value="class $name$ extends $bloc$  {&#10;&#10;  @override&#10;  List&lt;Object&gt; get props =&gt; [];&#10;    &#10;  @override&#10;  String toString() =&gt; '$name$';&#10;}" description="Bloc Child" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="bloc" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -59,10 +59,9 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="mybloclistener" value="BlocListener(&#10;    bloc:$1$,&#10;    listener:(context, $2$ state){&#10;        if (state is $2$Loading) {&#10;            WLoadingToast.show(); // 加载框&#10;        } else if (state is $2$Failed) {&#10;            WNav.snackBar(context, state.error); // 错误提示&#10;        }&#10;    },&#10;    child:$3$,&#10;)&#10;" description="BlocListener" toReformat="false" toShortenFQNames="true">
-    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="mybloclistener" value="BlocListener&lt;$bloc$, $bloc$State(&#10;    listener:(context,state){&#10;    },&#10;    child:$child$,&#10;)&#10;" description="BlocListener" toReformat="false" toShortenFQNames="true">
+    <variable name="bloc" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="child" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_STATEMENT" value="true" />
     </context>
@@ -134,9 +133,8 @@
       <option name="DART_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="myblocbuilder" value="BlocBuilder(bloc: $bloc$,builder: (BuildContext context, $state$ state){&#10;     &#10;},)," description="BlocBuilder" toReformat="false" toShortenFQNames="true">
+  <template name="myblocbuilder" value="BlocBuilder&lt;$bloc$, $bloc$State&gt;(builder: (context,state){&#10;     // builder 会被多次调用，所以需要返回一个 pure function&#10;},)," description="BlocBuilder" toReformat="false" toShortenFQNames="true">
     <variable name="bloc" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="state" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_STATEMENT" value="true" />
     </context>
@@ -157,12 +155,32 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="mymultilistener" value="MultiBlocListener(&#10;  listeners: [&#10;    BlocListener(&#10;        bloc:$1$,&#10;        listener:(context, state){&#10;            if (state is $2$Loading) {&#10;                WLoadingToast.show(); // 加载框&#10;            } else if (state is $2$Failed) {&#10;                WNav.snackBar(context, state.error); // 错误提示&#10;            }&#10;        }&#10;    )&#10;  ],&#10;  child: $3$,&#10;)" description="MultiBlocListener" toReformat="false" toShortenFQNames="true">
+  <template name="mymultilistener" value="MultiBlocListener(&#10;  listeners: [&#10;    BlocListener&lt;$1$, $1$State&gt;(&#10;        listener:(context, state){}&#10;    ),&#10;  ],&#10;  child: $3$,&#10;)" description="MultiBlocListener" toReformat="false" toShortenFQNames="true">
     <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="2" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="3" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="myblocprovider.create" value="BlocProvider(&#10;  create: (BuildContext context) =&gt; $bloc$(),&#10;  child: $child$(),&#10;);&#10;// with extensions: context.bloc&lt;BlocA&gt;();&#10;// without extensions:  BlocProvider.of&lt;BlocA&gt;(context)" description="bloc for children" toReformat="false" toShortenFQNames="true">
+    <variable name="bloc" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="child" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="myblocprovider.value" value="BlocProvider.value(&#10;  value: BlocProvider.of&lt;$bloc$&gt;(context),&#10;  child: $screen$(),&#10;);&#10;// with extensions: context.bloc&lt;BlocA&gt;();&#10;// without extensions:  BlocProvider.of&lt;BlocA&gt;(context)" description="bloc for other screen" toReformat="false" toShortenFQNames="true">
+    <variable name="bloc" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="screen" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="mymultiprovider" value="MultiBlocProvider(&#10;  providers: [&#10;    BlocProvider&lt;$bloc$&gt;(&#10;      create: (BuildContext context) =&gt; $bloc$(),&#10;    ),&#10;  ],&#10;  child: $child$,&#10;)" description="MultiBlocProvider" toReformat="false" toShortenFQNames="true">
+    <variable name="bloc" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="child" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
     </context>
   </template>
 </templateSet>
