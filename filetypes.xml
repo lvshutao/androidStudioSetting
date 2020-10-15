@@ -1,7 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
-      <removed_mapping ext="arb" approved="true" type="Application Resource Bundle" />
+      <mapping ext="webp" type="Image" />
       <mapping ext="arb" type="JSON" />
       <mapping ext="md" type="PLAIN_TEXT" />
       <removed_mapping ext="arb" approved="true" type="PLAIN_TEXT" />
